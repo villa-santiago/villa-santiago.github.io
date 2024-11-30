@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #33582f;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header li {
+    margin: 0 15px;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .hero {
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    transition: background-color 1s ease;
+    ;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    max-width: 800px;
+  }
+  
+  .hero p {
+    margin: 20px 0;
+    
+  }
+  
+  #cta-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #9CDE4E;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+  }
+  
+
+/* Confetti pieces */
+.confetti {
+    position: absolute;
+    pointer-events: none;
+    animation: burst var(--duration) ease-out forwards;
+    transform-origin: center;
+  }
+  
+  /* Burst explosion animation */
+  @keyframes burst {
+    0% {
+      transform: translate(0, 0) rotate(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(
+          calc(var(--distance) * cos(var(--angle))),
+          calc(var(--distance) * sin(var(--angle)))
+        )
+        rotate(var(--rotation))
+        scale(0.8);
+      opacity: 0.5;
+    }
+  }
+  
+  
+  
