@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctaButton = document.getElementById("cta-button");
   
     // Path to the SVG logo
-    const svgLogoPath = "https://github.com/villa-santiago/villa-santiago.github.io/blob/main/heart.svg"; // Replace with your actual SVG path
+    const svgLogoPath = "https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/heart.svg"; // Replace with your actual SVG path
   
     // Path to the sound effect
     const soundEffectPath = "/Users/santiagovilla/Desktop/cosa/sound.wav"; // Replace with your actual sound file
