@@ -61,7 +61,7 @@
     }
 
     .hero p {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       line-height: 2.2rem;
       max-width: 800px;
       margin-top: 20px;
@@ -227,20 +227,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const heroImage = document.querySelector(".hero img");
-
-      // Path to the SVG logo
       const svgLogoPath = "https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/heart.svg";
-      
-      // Path to the sound effect
-      const soundEffectPath = "https://example.com/sound.wav"; // Replace with your actual sound file
-
-      // Function to play sound
-      function playSound() {
-        const audio = new Audio(soundEffectPath);
-        audio.play();
-      }
-
+  
       // Function to create confetti
       function createConfetti(x, y) {
         const confetti = document.createElement("img");
@@ -248,44 +236,42 @@
         confetti.classList.add("confetti");
         confetti.style.left = `${x}px`;
         confetti.style.top = `${y}px`;
-
+  
         const angle = Math.random() * 360;
         const distance = Math.random() * 300 + 100;
         const duration = Math.random() * 1 + 1;
         const size = Math.random() * 20 + 10;
         const rotation = Math.random() * 720 - 360;
-
+  
         confetti.style.setProperty("--angle", `${angle}deg`);
         confetti.style.setProperty("--distance", `${distance}px`);
         confetti.style.setProperty("--duration", `${duration}s`);
         confetti.style.setProperty("--rotation", `${rotation}deg`);
         confetti.style.width = `${size}px`;
-
+  
         document.body.appendChild(confetti);
-
+  
         setTimeout(() => {
           confetti.remove();
         }, duration * 1000);
       }
-
-      // Add click event listener to the hero image
-      heroImage.addEventListener("click", (event) => {
-        generateConfetti(event);
-        playSound();
-      });
-
-      // Function to generate confetti
-      function generateConfetti(event) {
+  
+      // Function to generate confetti burst
+      function generateConfettiBurst() {
         const count = 50;
-        const x = event.clientX;
-        const y = event.clientY;
-
+        const x = window.innerWidth / 2; // Center horizontally
+        const y = window.innerHeight / 2; // Center vertically
+  
         for (let i = 0; i < count; i++) {
           createConfetti(x, y);
         }
       }
+  
+      // Trigger confetti burst on page load
+      generateConfettiBurst();
     });
   </script>
+  
 
   <footer>
     <p>&copy; 2024 Your Company</p>
