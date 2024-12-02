@@ -67,72 +67,107 @@
       margin-top: 20px;
     }
 
-    .card-section {
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto; /* Center the card section */
-    }
+    
 
-    .profile-card {
-      background-color: #fff;
-      color: #333;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 200px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
+   
 
-    .profile-card:hover {
-      transform: scale(1.05);
-    }
+    .card-wrapper {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
 
-    .profile-card h3 {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
+  .card-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
 
-    .profile-card a {
-      color: #1a73e8;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #1a73e8;
-      padding: 5px 10px;
-      border-radius: 5px;
-      display: inline-block;
-    }
+  .name-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .email-card {
-      background-color: #fff;
-      color: #333;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 200px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      margin-top: 20px;
-    }
+  .name-button {
+    display: flex;
+    justify-content: center;
+  }
 
-    .email-card h3 {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
+  .name-buttons button {
+    background-color: white;
+    color: #1a73e8;
+    border: 1px solid #1a73e8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
 
-    .email-card a {
-      color: #1a73e8;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #1a73e8;
-      padding: 5px 10px;
-      border-radius: 5px;
-      display: inline-block;
-    }
+  .name-buttons button:hover {
+    background-color: #f7f7f7;
+    transform: scale(1.05);
+  }
+
+  .name-buttons button:active {
+    transform: scale(1);
+  }.card-wrapper {
+    background-color: #f5f4e9;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .card-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .name-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .name-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .name-buttons button {
+    background-color: white;
+    color: #1a73e8;
+    border: 1px solid #1a73e8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .name-buttons button:hover {
+    background-color: #f7f7f7;
+    transform: scale(1.05);
+  }
+
+  .name-buttons button:active {
+    transform: scale(1);
+  }
+
+
 
     footer {
       background-color: #333;
@@ -174,41 +209,32 @@
     <p>Until we meet again, and to encourage you to explore the outdoors, we’re sending over a komoot premium voucher. Click on your name to redeem.</p>
   </section>
 
-  <section class="card-section">
-    <!-- Profile cards -->
-    <div class="profile-card">
-      <h3>Calla</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
-    </div>
-    <div class="profile-card">
-      <h3>Jane Smith</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
-    </div>
-    <div class="profile-card">
-      <h3>Emma Brown</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
-    </div>
-    <div class="profile-card">
-      <h3>Liam Wilson</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
-    </div>
-    <div class="profile-card">
-      <h3>Olivia Johnson</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
-    </div>
-    <div class="profile-card">
-      <h3>Noah Davis</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
-    </div>
-    <div class="profile-card">
-      <h3>Ava Martinez</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
-    </div>
-    <div class="profile-card">
-      <h3>Ethan Garcia</h3>
-      <a href="https://www.google.com" target="_blank">Access Voucher</a>
+  <section class="card-wrapper">
+    <div class="card-section">
+      <div class="name-buttons">
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">Calla</button>
+        </div>
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">Jane Smith</button>
+        </div>
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">Emma Brown</button>
+        </div>
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">Liam Wilson</button>
+        </div>
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">Olivia Johnson</button>
+        </div>
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">Noah Davis</button>
+        </div>
+      </div>
     </div>
   </section>
+  
+  
 
   <section class="card-section">
     <!-- Email list -->
