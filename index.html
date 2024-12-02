@@ -5,192 +5,260 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Landing Page</title>
   <style>
-
     body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #33582f;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  header li {
-    margin: 0 15px;
-  }
-  
-  header a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .hero {
-    text-align: center;
-    color: white;
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    transition: background-color 1s ease;
-    ;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    max-width: 800px;
-  }
-  
-  .hero p {
-    margin: 20px 0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #33582f;
+      color: white;
+    }
     
-  }
-  
-  #cta-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #9CDE4E;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  section {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: sticky;
-    bottom: 0;
-  }
-  
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .hero img {
+      width: 50%;
+      height: auto;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 20px;
+    }
 
-/* Confetti pieces */
-.confetti {
-    position: absolute;
-    pointer-events: none;
-    animation: burst var(--duration) ease-out forwards;
-    transform-origin: center;
-  }
-  
-  /* Burst explosion animation */
-  @keyframes burst {
-    0% {
-      transform: translate(0, 0) rotate(0) scale(1);
-      opacity: 1;
+    .hero p {
+      font-size: 1.3rem;
+      line-height: 1.5;
+      margin-top: 20px;
+      max-width: 600px;
+      text-align: center;
     }
-    100% {
-      transform: translate(
-          calc(var(--distance) * cos(var(--angle))),
-          calc(var(--distance) * sin(var(--angle)))
-        )
-        rotate(var(--rotation))
-        scale(0.8);
-      opacity: 0.5;
+    
+    .card-section {
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-  }
-  
-  
-  
-  
+    
+    .profile-card {
+      background-color: #33582f;
+      color: white;
+      border-radius: 10px;
+      border: 2px solid white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .profile-card:hover {
+      transform: scale(1.05);
+    }
+    
+    .profile-card h3 {
+      margin: 10px 0;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+    
+    .profile-card a {
+      display: none; /* Hide the inner link; we'll use card click for navigation */
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    
+    ul.email-list {
+      list-style: none;
+      padding: 0;
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    ul.email-list li {
+      margin: 5px 0;
+    }
+    
+    /* Confetti animation */
+    .confetti {
+      position: absolute;
+      pointer-events: none;
+      animation: burst var(--duration) ease-out forwards;
+      transform-origin: center;
+    }
+    
+    @keyframes burst {
+      0% {
+        transform: translate(0, 0) rotate(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(
+            calc(var(--distance) * cos(var(--angle))),
+            calc(var(--distance) * sin(var(--angle)))
+          )
+          rotate(var(--rotation))
+          scale(0.8);
+        opacity: 0.5;
+      }
+    }
   </style>
 </head>
 <body>
 
+
   <section class="hero">
+    <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/komoot-love.png" alt="Hero Placeholder Image">
     <h1>Hey Monzo, let's do this again.</h1>
-    <button id="cta-button">Love us back</button>
+    <p>We were very inspired by your work! As a thank you, we’re sending over a komoot premium voucher—hope it encourages you to explore and create even more magic.</p>
   </section>
 
-  <script>
+  <section class="card-section">
+    <!-- Profile cards -->
+    <div class="profile-card" data-url="https://example.com/voucher1">
+      <h3>Almo</h3>
+    </div>
+    <div class="profile-card" data-url="https://example.com/voucher2">
+      <h3>Calla</h3>
+    </div>
+    <div class="profile-card" data-url="https://example.com/voucher7">
+      <h3>Divyanshu</h3>
+    </div>
+    <div class="profile-card" data-url="https://example.com/voucher3">
+      <h3>Juan</h3>
+    </div>
+    <div class="profile-card" data-url="https://example.com/voucher4">
+      <h3>Laura</h3>
+    </div>
+    <div class="profile-card" data-url="https://example.com/voucher5">
+      <h3>Mark</h3>
+    </div>
+    <div class="profile-card" data-url="https://example.com/voucher6">
+      <h3>Sam</h3>
+    </div>
+    <div class="profile-card" data-url="https://example.com/voucher8">
+      <h3>Vuokko</h3>
+    </div>
+  </section>
 
+  <ul class="email-list">
+    
+               
+                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
+                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Anastasia
+                </a>
+                &nbsp;
+                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
+                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Ellen
+                </a>
+                &nbsp;
+                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
+                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Johanna
+                </a>
+                &nbsp;
+                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
+                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Jonas
+                </a>
+                &nbsp;
+                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
+                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Neil
+                </a>
+                &nbsp;
+                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
+                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Santiago
+                </a>
+                &nbsp;
+                
+  </ul>
+
+
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
-    const ctaButton = document.getElementById("cta-button");
+  const profileCards = document.querySelectorAll(".profile-card");
   
-    // Path to the SVG logo
-    const svgLogoPath = "https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/heart.svg"; // Replace with your actual SVG path
+  const svgLogoPath = "https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/heart.svg";
   
-    // Path to the sound effect
-    const soundEffectPath = "/Users/santiagovilla/Desktop/cosa/sound.wav"; // Replace with your actual sound file
+  function playSound() {
+    const audio = new Audio("https://example.com/sound.wav");
+    audio.play();
+  }
   
-    // Function to play sound
-    function playSound() {
-      const audio = new Audio(soundEffectPath);
-      audio.play();
-    }
-  
-    // Function to create confetti
-    function createConfetti(x, y) {
-      const confetti = document.createElement("img");
-      confetti.src = svgLogoPath;
-      confetti.classList.add("confetti");
-      confetti.style.left = `${x}px`;
-      confetti.style.top = `${y}px`;
-  
-      // Randomize movement and rotation
-      const angle = Math.random() * 360; // Random direction
-      const distance = Math.random() * 300 + 100; // Distance between 100px to 400px
-      const duration = Math.random() * 1 + 1; // Animation duration (1–2 seconds)
-      const size = Math.random() * 20 + 10; // Size between 10px and 30px
-      const rotation = Math.random() * 720 - 360; // Random rotation between -360 and 360 degrees
-  
-      confetti.style.setProperty("--angle", `${angle}deg`);
-      confetti.style.setProperty("--distance", `${distance}px`);
-      confetti.style.setProperty("--duration", `${duration}s`);
-      confetti.style.setProperty("--rotation", `${rotation}deg`);
-      confetti.style.width = `${size}px`; // Random size
-  
-      document.body.appendChild(confetti);
-  
-      // Remove confetti after animation ends
-      setTimeout(() => {
-        confetti.remove();
-      }, duration * 1000);
-    }
-  
-    // Generate multiple confetti pieces on click
-    function generateConfetti(event) {
-      const count = 50; // Number of confetti pieces
+  function createConfetti(x, y) {
+    const confetti = document.createElement("img");
+    confetti.src = svgLogoPath;
+    confetti.classList.add("confetti");
+    confetti.style.left = `${x}px`;
+    confetti.style.top = `${y}px`;
+
+    const angle = Math.random() * 360;
+    const distance = Math.random() * 300 + 100;
+    const duration = Math.random() * 1 + 1;
+    const size = Math.random() * 20 + 10;
+    const rotation = Math.random() * 720 - 360;
+
+    confetti.style.setProperty("--angle", `${angle}deg`);
+    confetti.style.setProperty("--distance", `${distance}px`);
+    confetti.style.setProperty("--duration", `${duration}s`);
+    confetti.style.setProperty("--rotation", `${rotation}deg`);
+    confetti.style.width = `${size}px`;
+
+    document.body.appendChild(confetti);
+
+    setTimeout(() => {
+      confetti.remove();
+    }, duration * 1000);
+  }
+
+  profileCards.forEach(card => {
+    card.addEventListener("click", (event) => {
       const x = event.clientX;
       const y = event.clientY;
-  
-      for (let i = 0; i < count; i++) {
+
+      // Generate confetti
+      for (let i = 0; i < 50; i++) {
         createConfetti(x, y);
       }
-    }
-  
-    // Add click event listener to the CTA button
-    ctaButton.addEventListener("click", (event) => {
-      generateConfetti(event);
-      playSound(); // Play sound effect on click
+
+      // Play sound
+      playSound();
+
+      // Delay opening the URL to let the burst effect display first
+      const url = card.getAttribute("data-url");
+      if (url) {
+        setTimeout(() => {
+          window.open(url, "_blank");
+        }, 1000); // Adjust delay in milliseconds (1 second here)
+      }
     });
   });
-  
+});
 
-  
   </script>
+
 </body>
 </html>
