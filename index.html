@@ -1,243 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Landing Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #33582f;
-      color: white;
-    }
-    
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-    }
-    
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .hero img {
-      width: 50%;
-      height: auto;
-      max-width: 400px;
-      margin-bottom: 20px;
-    }
-    
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 20px;
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  const voucherLinks = document.querySelectorAll(".voucher-link");
 
-    .hero p {
-      font-size: 1.3rem;
-      line-height: 1.5;
-      margin-top: 20px;
-      max-width: 600px;
-      text-align: center;
-    }
-    
-    .card-section {
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .profile-card {
-  background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  position: relative; /* Ensure the card can layer correctly */
-}
-
-.profile-card:hover {
-  transform: scale(1.05);
-}
-
-.profile-card h3 {
-  margin: 10px 0;
-  font-size: 1.2rem;
-}
-
-.profile-card a {
-  color: #1a73e8;
-  text-decoration: none;
-  font-weight: bold;
-  display: block; /* Make the link block level */
-  margin-top: 10px;
-}
-
-.profile-card a.voucher-link {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 2px solid white;
-  border-radius: 5px;
-  background-color: transparent;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.profile-card a.voucher-link:hover {
-  background-color: white;
-  color: #333;
-}
-
-.profile-card a.voucher-link:active {
-  opacity: 0.7;
-}
-
-.profile-card a.voucher-link {
-  z-index: 1; /* Ensure the link is on top and clickable */
-}
-
-    
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
-    
-    ul.email-list {
-      list-style: none;
-      padding: 0;
-      margin: 40px auto;
-      max-width: 800px;
-      text-align: center;
-    }
-
-    ul.email-list li {
-      margin: 5px 0;
-    }
-    
-    /* Confetti animation */
-    .confetti {
-      position: absolute;
-      pointer-events: none;
-      animation: burst var(--duration) ease-out forwards;
-      transform-origin: center;
-    }
-    
-    @keyframes burst {
-      0% {
-        transform: translate(0, 0) rotate(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translate(
-            calc(var(--distance) * cos(var(--angle))),
-            calc(var(--distance) * sin(var(--angle)))
-          )
-          rotate(var(--rotation))
-          scale(0.8);
-        opacity: 0.5;
-      }
-    }
-  </style>
-</head>
-<body>
-
-
-  <section class="hero">
-    <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/komoot-love.png" alt="Hero Placeholder Image">
-    <h1>Hey Monzo, let's do this again.</h1>
-    <p>We were very inspired by your work! As a thank you, we’re sending over a komoot premium voucher—hope it encourages you to explore and create even more magic.</p>
-  </section>
-
-  <section class="card-section">
-    <!-- Profile cards -->
-    <div class="profile-card" data-url="https://www.google.com">
-      <h3>Almo</h3>
-    </div>
-    <div class="profile-card" data-url="https://example.com/voucher2">
-      <h3>Calla</h3>
-    </div>
-    <div class="profile-card" data-url="https://example.com/voucher7">
-      <h3>Divyanshu</h3>
-    </div>
-    <div class="profile-card" data-url="https://example.com/voucher3">
-      <h3>Juan</h3>
-    </div>
-    <div class="profile-card" data-url="https://example.com/voucher4">
-      <h3>Laura</h3>
-    </div>
-    <div class="profile-card" data-url="https://example.com/voucher5">
-      <h3>Mark</h3>
-    </div>
-    <div class="profile-card" data-url="https://example.com/voucher6">
-      <h3>Sam</h3>
-    </div>
-    <div class="profile-card" data-url="https://example.com/voucher8">
-      <h3>Vuokko</h3>
-    </div>
-  </section>
-
-
-  
-
-  <ul class="email-list">
-    
-               
-                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
-                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Anastasia
-                </a>
-                &nbsp;
-                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
-                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Ellen
-                </a>
-                &nbsp;
-                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
-                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Johanna
-                </a>
-                &nbsp;
-                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
-                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Jonas
-                </a>
-                &nbsp;
-                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
-                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Neil
-                </a>
-                &nbsp;
-                <a href="https://calndr.link/e/K0WfWMvkd9?s=google" target="_blank"
-                   style="color:#ffffff;text-decoration:underline;font-size:15px;">Santiago
-                </a>
-                &nbsp;
-                
-  </ul>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const profileCards = document.querySelectorAll(".profile-card");
-  
+  // Path to the SVG logo
   const svgLogoPath = "https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/heart.svg";
-  
+
+  // Path to the sound effect
+  const soundEffectPath = "https://example.com/sound.wav"; // Replace with your actual sound file
+
+  // Function to play sound
   function playSound() {
-    const audio = new Audio("https://example.com/sound.wav");
+    const audio = new Audio(soundEffectPath);
     audio.play();
   }
-  
+
+  // Function to create confetti
   function createConfetti(x, y) {
     const confetti = document.createElement("img");
     confetti.src = svgLogoPath;
@@ -264,31 +40,28 @@
     }, duration * 1000);
   }
 
-  profileCards.forEach(card => {
-    card.addEventListener("click", (event) => {
-      const x = event.clientX;
-      const y = event.clientY;
-
-      // Generate confetti
-      for (let i = 0; i < 50; i++) {
-        createConfetti(x, y);
-      }
-
-      // Play sound
+  // Add click event listeners to voucher links
+  voucherLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default behavior for links
+      generateConfetti(event); // Only trigger confetti for non-link elements
       playSound();
-
-      // Delay opening the URL to let the burst effect display first
-      const url = card.getAttribute("data-url");
-      if (url) {
-        setTimeout(() => {
-          window.open(url, "_blank");
-        }, 1000); // Adjust delay in milliseconds (1 second here)
-      }
+      
+      // Open the link after the burst effect finishes
+      setTimeout(() => {
+        window.location.href = link.href; // Open the URL after the animation
+      }, 1000); // Adjust the delay time as necessary to match the burst effect duration
     });
   });
+
+  // Function to generate confetti
+  function generateConfetti(event) {
+    const count = 50;
+    const x = event.clientX;
+    const y = event.clientY;
+
+    for (let i = 0; i < count; i++) {
+      createConfetti(x, y);
+    }
+  }
 });
-
-  </script>
-
-</body>
-</html>
