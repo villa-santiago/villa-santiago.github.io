@@ -86,21 +86,16 @@
 
   .name-buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 15px;
   }
 
-  .name-button {
-    display: flex;
-    justify-content: center;
-  }
-
-  .name-buttons button {
+  .name-button button {
     display: flex;
     align-items: center;
     background-color: white;
-    color: #333; /* Updated text color */
-    border: none; /* Removed border */
+    color: #333;
+    border: none;
     border-radius: 50px;
     padding: 10px 20px;
     font-size: 1rem;
@@ -109,7 +104,7 @@
     width: 100%;
   }
 
-  .name-buttons button img {
+  .name-button button img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -118,7 +113,7 @@
 
   @media (max-width: 768px) {
     .name-buttons {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Stack buttons in one column on mobile */
     }
   }
 
@@ -169,43 +164,57 @@
       <div class="name-buttons">
         <div class="name-button">
           <button onclick="window.location.href='https://www.google.com';">
-            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            <img src="https://via.placeholder.com/40" alt="Avatar for Calla" />
             Calla
           </button>
         </div>
         <div class="name-button">
           <button onclick="window.location.href='https://www.google.com';">
-            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            <img src="https://via.placeholder.com/40" alt="Avatar for Jane Smith" />
             Jane Smith
           </button>
         </div>
         <div class="name-button">
           <button onclick="window.location.href='https://www.google.com';">
-            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            <img src="https://via.placeholder.com/40" alt="Avatar for Emma Brown" />
             Emma Brown
           </button>
         </div>
         <div class="name-button">
           <button onclick="window.location.href='https://www.google.com';">
-            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            <img src="https://via.placeholder.com/40" alt="Avatar for Liam Wilson" />
             Liam Wilson
           </button>
         </div>
         <div class="name-button">
           <button onclick="window.location.href='https://www.google.com';">
-            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            <img src="https://via.placeholder.com/40" alt="Avatar for Olivia Johnson" />
             Olivia Johnson
           </button>
         </div>
         <div class="name-button">
           <button onclick="window.location.href='https://www.google.com';">
-            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            <img src="https://via.placeholder.com/40" alt="Avatar for Noah Davis" />
             Noah Davis
+          </button>
+        </div>
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar for Mia White" />
+            Mia White
+          </button>
+        </div>
+        <div class="name-button">
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar for Lucas Green" />
+            Lucas Green
           </button>
         </div>
       </div>
     </div>
   </section>
+  
+  
   
   
 
