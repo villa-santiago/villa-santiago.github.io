@@ -31,35 +31,16 @@
     }
 
     .hero img {
-      width: 100%;
-      height: auto;
-      object-fit: cover; /* Ensures the image covers the space */
-      max-width: 100%;  /* Prevents image from being too large on desktop */
-      max-height: 500px; /* Limits the maximum height on larger screens */
-      margin-bottom: 20px;
-    }
-
-    @media (min-width: 768px) {
-      /* On larger screens, we adjust the max-height and padding for better proportions */
-      .hero img {
-        max-height: 600px; /* Adjusted height for larger screens */
-      }
-
-      .hero {
-        padding: 80px 20px;  /* Adjust padding for larger screens */
-      }
-    }
-
-    @media (max-width: 768px) {
-      /* For mobile screens, we reduce the padding and make sure the image scales properly */
-      .hero img {
-        max-height: 300px; /* Limit the height on mobile devices */
-      }
+  width: auto; /* Allows intrinsic width */
+  max-width: 40%; /* Restrict image to at most 50% of the container width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Maintain spacing */
+}
 
       .hero {
         padding: 30px 20px; /* Reduce padding on mobile */
       }
-    }
+    
 
     .hero h1 {
       font-size: 3rem;
