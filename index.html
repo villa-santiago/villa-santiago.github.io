@@ -60,30 +60,57 @@
     }
     
     .profile-card {
-      background-color: #33582f;
-      color: white;
-      border-radius: 10px;
-      border: 2px solid white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 200px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    
-    .profile-card:hover {
-      transform: scale(1.05);
-    }
-    
-    .profile-card h3 {
-      margin: 10px 0;
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-    }
-    
-    .profile-card a {
-      display: none; /* Hide the inner link; we'll use card click for navigation */
-    }
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative; /* Ensure the card can layer correctly */
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+}
+
+.profile-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.profile-card a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+  display: block; /* Make the link block level */
+  margin-top: 10px;
+}
+
+.profile-card a.voucher-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-card a.voucher-link:hover {
+  background-color: white;
+  color: #333;
+}
+
+.profile-card a.voucher-link:active {
+  opacity: 0.7;
+}
+
+.profile-card a.voucher-link {
+  z-index: 1; /* Ensure the link is on top and clickable */
+}
+
     
     footer {
       background-color: #333;
@@ -140,7 +167,7 @@
 
   <section class="card-section">
     <!-- Profile cards -->
-    <div class="profile-card" data-url="https://example.com/voucher1">
+    <div class="profile-card" data-url="https://www.google.com">
       <h3>Almo</h3>
     </div>
     <div class="profile-card" data-url="https://example.com/voucher2">
@@ -165,6 +192,9 @@
       <h3>Vuokko</h3>
     </div>
   </section>
+
+
+  
 
   <ul class="email-list">
     
