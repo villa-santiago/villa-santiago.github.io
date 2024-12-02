@@ -118,6 +118,43 @@
     }
   }
 
+  .email-card {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .email-card h3 {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  .email-card ul {
+    list-style: none; /* Removes dots */
+    padding: 0;       /* Removes extra spacing */
+    margin: 0;
+  }
+
+  .email-card ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: left; /* Center-aligns the email addresses */
+  }
+
+  .email-card ul li a {
+    text-decoration: none;
+    color: #333; /* Matches card text color */
+  }
+
+  .email-card ul li a:hover {
+    text-decoration: underline; /* Adds a hover effect for accessibility */
+  }
+
 
 
     footer {
@@ -219,10 +256,9 @@
   
   
 
-  <section>
-    <!-- Email list -->
-    <div>
-      <h3>Emails</h3>
+  <section class="card-wrapper">
+    <div class="email-card">
+      <h3>The komoot design team</h3>
       <ul>
         <li><a href="mailto:calla@example.com">calla@example.com</a></li>
         <li><a href="mailto:jane.smith@example.com">jane.smith@example.com</a></li>
@@ -230,6 +266,8 @@
         <li><a href="mailto:liam.wilson@example.com">liam.wilson@example.com</a></li>
         <li><a href="mailto:olivia.johnson@example.com">olivia.johnson@example.com</a></li>
         <li><a href="mailto:noah.davis@example.com">noah.davis@example.com</a></li>
+        <li><a href="mailto:ava.martin@example.com">ava.martin@example.com</a></li>
+        <li><a href="mailto:logan.miller@example.com">logan.miller@example.com</a></li>
       </ul>
     </div>
   </section>
