@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,15 +32,21 @@
 
     .hero img {
       width: 100%;
-      max-width: 600px; /* Set a max width */
+      max-width: 100%;
       height: auto;
-      object-fit: cover; /* Ensure it maintains its aspect ratio */
+      object-fit: contain; /* Fix image cropping on mobile */
       margin-bottom: 20px;
     }
 
     .hero h1 {
       font-size: 3rem;
       max-width: 800px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin-top: 20px;
     }
 
     .card-section {
@@ -75,6 +80,33 @@
     }
 
     .profile-card a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #1a73e8;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .email-card {
+      background-color: #fff;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .email-card h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .email-card a {
       color: #1a73e8;
       text-decoration: none;
       font-weight: bold;
@@ -122,6 +154,7 @@
   <section class="hero">
     <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/komoot-love.png" alt="Hero Placeholder Image">
     <h1>Hey Monzo, let's do this again.</h1>
+    <p>This is a great opportunity to access exclusive rewards. Don't miss out!</p>
   </section>
 
   <section class="card-section">
@@ -157,6 +190,21 @@
     <div class="profile-card">
       <h3>Ethan Garcia</h3>
       <a href="https://www.google.com" target="_blank">Access Voucher</a>
+    </div>
+  </section>
+
+  <section class="card-section">
+    <!-- Email list -->
+    <div class="email-card">
+      <h3>Emails</h3>
+      <ul>
+        <li><a href="mailto:calla@example.com">calla@example.com</a></li>
+        <li><a href="mailto:jane.smith@example.com">jane.smith@example.com</a></li>
+        <li><a href="mailto:emma.brown@example.com">emma.brown@example.com</a></li>
+        <li><a href="mailto:liam.wilson@example.com">liam.wilson@example.com</a></li>
+        <li><a href="mailto:olivia.johnson@example.com">olivia.johnson@example.com</a></li>
+        <li><a href="mailto:noah.davis@example.com">noah.davis@example.com</a></li>
+      </ul>
     </div>
   </section>
 
