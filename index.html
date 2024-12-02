@@ -31,10 +31,18 @@
     }
 
     .hero img {
-  width: auto; /* Allows intrinsic width */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 20px; /* Maintain spacing */
+  width: auto;
+  height: auto;
+  max-width: 50%; /* Default for desktop */
+  margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+  .hero img {
+    max-width: 80%; /* Allow larger images on smaller screens */
+  }
+}
+
 
       .hero {
         padding: 30px 20px; /* Reduce padding on mobile */
