@@ -61,7 +61,7 @@
     }
 
     .hero p {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       line-height: 2.2rem;
       max-width: 800px;
       margin-top: 20px;
@@ -86,7 +86,7 @@
 
   .name-buttons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr); /* Maintain two columns */
     gap: 15px;
   }
 
@@ -111,9 +111,10 @@
     margin-right: 10px;
   }
 
+  /* Adjust the layout for smaller screens */
   @media (max-width: 768px) {
     .name-buttons {
-      grid-template-columns: 1fr; /* Stack buttons in one column on mobile */
+      grid-template-columns: repeat(2, 1fr); /* Still two columns on mobile */
     }
   }
 
@@ -156,7 +157,7 @@
   <section class="hero">
     <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/komoot-love.png" alt="Hero Placeholder Image">
     <h1>Good choice!</h1>
-    <p>Until we meet again, and to encourage you to explore the outdoors, we’re sending over a komoot premium voucher. Click on your name to redeem.</p>
+    <p>Until we meet again, and to encourage you to explore the outdoors, we’re sending over komoot premium vouchers. Click on your name to redeem.</p>
   </section>
 
   <section class="card-wrapper">
@@ -218,9 +219,9 @@
   
   
 
-  <section class="card-section">
+  <section>
     <!-- Email list -->
-    <div class="email-card">
+    <div>
       <h3>Emails</h3>
       <ul>
         <li><a href="mailto:calla@example.com">calla@example.com</a></li>
