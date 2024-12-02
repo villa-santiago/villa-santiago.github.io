@@ -69,14 +69,10 @@
 
     
 
-   
-
     .card-wrapper {
-    background-color: #fff;
     color: #333;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
   }
@@ -85,11 +81,12 @@
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 20px;
+    color: #333;
   }
 
   .name-buttons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
   }
 
@@ -99,72 +96,30 @@
   }
 
   .name-buttons button {
+    display: flex;
+    align-items: center;
     background-color: white;
-    color: #1a73e8;
-    border: 1px solid #1a73e8;
+    color: #333; /* Updated text color */
+    border: none; /* Removed border */
+    border-radius: 50px;
     padding: 10px 20px;
-    border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    flex-grow: 1;
-    text-align: center;
-    transition: all 0.3s ease;
+    text-align: left;
+    width: 100%;
   }
 
-  .name-buttons button:hover {
-    background-color: #f7f7f7;
-    transform: scale(1.05);
+  .name-buttons button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
   }
 
-  .name-buttons button:active {
-    transform: scale(1);
-  }.card-wrapper {
-    background-color: #f5f4e9;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-  .card-section h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-
-  .name-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .name-button {
-    display: flex;
-    justify-content: center;
-  }
-
-  .name-buttons button {
-    background-color: white;
-    color: #1a73e8;
-    border: 1px solid #1a73e8;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    flex-grow: 1;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  .name-buttons button:hover {
-    background-color: #f7f7f7;
-    transform: scale(1.05);
-  }
-
-  .name-buttons button:active {
-    transform: scale(1);
+  @media (max-width: 768px) {
+    .name-buttons {
+      grid-template-columns: 1fr;
+    }
   }
 
 
@@ -213,22 +168,40 @@
     <div class="card-section">
       <div class="name-buttons">
         <div class="name-button">
-          <button onclick="window.location.href='https://www.google.com';">Calla</button>
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            Calla
+          </button>
         </div>
         <div class="name-button">
-          <button onclick="window.location.href='https://www.google.com';">Jane Smith</button>
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            Jane Smith
+          </button>
         </div>
         <div class="name-button">
-          <button onclick="window.location.href='https://www.google.com';">Emma Brown</button>
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            Emma Brown
+          </button>
         </div>
         <div class="name-button">
-          <button onclick="window.location.href='https://www.google.com';">Liam Wilson</button>
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            Liam Wilson
+          </button>
         </div>
         <div class="name-button">
-          <button onclick="window.location.href='https://www.google.com';">Olivia Johnson</button>
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            Olivia Johnson
+          </button>
         </div>
         <div class="name-button">
-          <button onclick="window.location.href='https://www.google.com';">Noah Davis</button>
+          <button onclick="window.location.href='https://www.google.com';">
+            <img src="https://via.placeholder.com/40" alt="Avatar" />
+            Noah Davis
+          </button>
         </div>
       </div>
     </div>
