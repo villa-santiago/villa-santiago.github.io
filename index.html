@@ -313,11 +313,8 @@
       }
   
       // Function to generate confetti burst
-      function generateConfettiBurst() {
+      function generateConfettiBurst(x = window.innerWidth / 2, y = window.innerHeight / 2) {
         const count = 50;
-        const x = window.innerWidth / 2; // Center horizontally
-        const y = window.innerHeight / 2; // Center vertically
-  
         for (let i = 0; i < count; i++) {
           createConfetti(x, y);
         }
@@ -325,8 +322,20 @@
   
       // Trigger confetti burst on page load
       generateConfettiBurst();
+  
+      // Add click event to the hero image
+      const heroImage = document.querySelector(".hero img");
+      if (heroImage) {
+        heroImage.addEventListener("click", (event) => {
+          const rect = event.target.getBoundingClientRect();
+          const x = rect.left + rect.width / 2;
+          const y = rect.top + rect.height / 2;
+          generateConfettiBurst(x, y);
+        });
+      }
     });
   </script>
+  
 
 </body>
 </html>
