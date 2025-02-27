@@ -3,7 +3,14 @@ class Game {
         this.startScreen = document.getElementById("game-intro");
         this.gameScreen = document.getElementById("game-screen");
         this.gameOutroScreen = document.getElementById("game-outro");
-        this.player = null;
+        this.player = new Player(
+            this.gameScreen,
+            200,
+            500,
+            100,
+            150,
+            "./character.png"
+        );
         this.width = 800;
         this.height = 450;
         this.obstacles = [];
