@@ -14,7 +14,8 @@ body {
 }
 
 #game-screen {
-    background-color: aqua;
+    background-image: url(./character.png);
+     background-size: cover;
     display: none;
 }
 
