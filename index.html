@@ -1,344 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>komoot × monzo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obscura — transmute, ascend, unveil</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-  <style>
-    body {
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 1.2rem;
-      margin: 0;
-      padding: 0;
-      background-color: #33582f;
-      color: white;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-    }
-
-    .hero {
-      text-align: center;
-      color: white;
-      padding: 50px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero img {
-  width: 100%; /* Makes the image responsive to the container width */
-  height: auto; /* Maintains the aspect ratio */
-  object-fit: contain; /* Ensures the image is fully visible without cropping */
-  max-width: 500px; /* Limits the size on larger screens */
-  margin-bottom: 20px; /* Keeps spacing consistent */
-}
-
-@media (max-width: 768px) {
-  .hero img {
-    max-width: 90%; /* Adjusts for smaller screen sizes */
-    height: auto; /* Ensures no distortion */
-  }
-}
-
-
-
-      .hero {
-        padding: 30px 20px; /* Reduce padding on mobile */
-      }
-    
-
-    .hero h1 {
-      font-size: 3.5rem;
-      max-width: 800px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      line-height: 2.2rem;
-      max-width: 800px;
-      margin-top: 20px;
-    }
-
-    
-
-    .card-wrapper {
-    color: #333;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-  .card-section h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-
-  .name-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Maintain two columns */
-    gap: 15px;
-  }
-
-  .name-button button {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    color: #333;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: left;
-    width: 100%;
-  }
-
-  .name-button button img {
-    width: 40px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-
-  /* Adjust the layout for smaller screens */
-  @media (max-width: 768px) {
-    .name-buttons {
-      grid-template-columns: repeat(2, 1fr); /* Still two columns on mobile */
-    }
-  }
-
-  .email-card {
-    background-color: white;
-    color: #333;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-
-  .email-card h3 {
-    text-align: left;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-  }
-
-  .email-card ul {
-    list-style: none; /* Removes dots */
-    padding: 0;       /* Removes extra spacing */
-    margin: 0;
-  }
-
-  .email-card ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    text-align: left; /* Center-aligns the email addresses */
-  }
-
-  .email-card ul li a {
-    text-decoration: none;
-    color: #333; /* Matches card text color */
-  }
-
-  .email-card ul li a:hover {
-    text-decoration: underline; /* Adds a hover effect for accessibility */
-  }
-
-
-    /* Confetti animation */
-    .confetti {
-      position: absolute;
-      pointer-events: none;
-      animation: burst var(--duration) ease-out forwards;
-      transform-origin: center;
-    }
-
-    a:hover, a:focus { text-decoration: none; } .name-button button:hover, .name-button button:focus { background-color: #e4e4e4; }
-
-
-    @keyframes burst {
-      0% {
-        transform: translate(0, 0) rotate(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translate(
-            calc(var(--distance) * cos(var(--angle))),
-            calc(var(--distance) * sin(var(--angle)))
-          )
-          rotate(var(--rotation))
-          scale(0.8);
-        opacity: 0.5;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <section class="hero">
-    <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/komoot-heart.png" alt="Hero Placeholder Image">
-    <h1>The Magic of Adventure</h1>
-    <p>Until we meet again, and to encourage you to explore the outdoors, we’re sending over komoot premium vouchers. Click on your name to redeem.</p>
-  </section>
-
-  <section class="card-wrapper">
-    <div class="card-section">
-      <div class="name-buttons">
-        <div class="name-button">
-          <button onclick="window.location.href='https://www.komoot.com/g?code=PR129GJJQ3B5';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Almo" />
-            Almo
-          </button>
-        </div>
-        <div class="name-button">
-          <button onclick="window.location.href='https://www.komoot.com/g?code=PR129GUVUBNY';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Calla" />
-            Calla
-          </button>
-        </div>
-        <div class="name-button">
-          <button onclick="window.location.href='https://www.komoot.com/g?code=PR129GXEM3HD';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Divyanshun" />
-            Divyanshu
-          </button>
-        </div>
-        <div class="name-button">
-          <button onclick="window.location.href='https://komoot.com/g?code=PR129HKOAQNN';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Juan" />
-            Juan
-          </button>
-        </div>
-        <div class="name-button">
-          <button onclick="window.location.href='https://www.komoot.com/g?code=PR129HQYF0KW';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Laura" />
-            Laura
-          </button>
-        </div>
-        <div class="name-button">
-          <button onclick="window.location.href='https://www.komoot.com/g?code=PR129IQ1IWT8';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Mark" />
-            Mark
-          </button>
-        </div>
-        <div class="name-button">
-          <button onclick="window.location.href='https://www.komoot.com/g?code=PR129J1PLT1E';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Sam" />
-            Sam
-          </button>
-        </div>
-        <div class="name-button">
-          <button onclick="window.location.href='https://www.komoot.com/g?code=PR129J55SBKE';">
-            <img src="https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/premium.svg" alt="Avatar for Vuokko" />
-            Vuokko
-          </button>
-        </div>
+  <body>
+    <main>
+      <!-- intro screen -->
+      <div id="game-intro">
+        <img src="assets/character.png" alt="" class="character">
+        <p>the oldest and strongest emotion of mankind is fear.</p>
+        <button id="start-btn">unveil</button>
       </div>
-    </div>
-  </section>
-  
-  
-  
-  
 
-  <section class="card-wrapper">
-    <div class="email-card">
-      <h3 style="text-align: center;">With love from the komoot Design Team 💚</h3>
-      <p style=" color: #333; text-align: center;">
-      
-        <a href="mailto:anastasia@komoot.de" style=" color: #333; text-align: center;">Anastasia</a>
-        &nbsp;
-        <a href="mailto:charlie@komoot.de" style=" color: #333; text-align: center;">Charlie</a>
-        &nbsp;
-        <a href="mailto:dmytro@komoot.de" style=" color: #333; text-align: center;">Dmytro</a>
-        &nbsp;
-        <a href="mailto:ellen@komoot.de" style=" color: #333; text-align: center;">Ellen</a>
-        &nbsp;
-        <a href="mailto:enrico@komoot.de" style=" color: #333; text-align: center;">Enrico</a>
-        &nbsp;
-        <a href="mailto:johanna@komoot.de" style=" color: #333; text-align: center;">Johanna</a>
-        &nbsp;
-        <a href="mailto:jr@komoot.de" style=" color: #333; text-align: center;">Jonas</a>
-        &nbsp;
-        <a href="mailto:laura@komoot.de" style=" color: #333; text-align: center;">Laura</a>
-        &nbsp;
-        <a href="mailto:marius@komoot.de" style=" color: #333; text-align: center;">Marius</a>
-        &nbsp;
-        <a href="mailto:neil@komoot.de" style=" color: #333; text-align: center;">Neil</a>
-        &nbsp;
-        <a href="mailto:santiago@komoot.de" style=" color: #333; text-align: center;">Santiago</a>
-        &nbsp;
-        <a href="mailto:viki@komoot.de" style=" color: #333; text-align: center;">Viki</a>
-      
-    </p>
-    </div>
-  </section>
+      <div id="game-wrapper">
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const svgLogoPath = "https://raw.githubusercontent.com/villa-santiago/villa-santiago.github.io/refs/heads/main/heart.svg";
-  
-      // Function to create confetti
-      function createConfetti(x, y) {
-        const confetti = document.createElement("img");
-        confetti.src = svgLogoPath;
-        confetti.classList.add("confetti");
-        confetti.style.left = `${x}px`;
-        confetti.style.top = `${y}px`;
-  
-        const angle = Math.random() * 360;
-        const distance = Math.random() * 300 + 100;
-        const duration = Math.random() * 1 + 1;
-        const size = Math.random() * 20 + 10;
-        const rotation = Math.random() * 720 - 360;
-  
-        confetti.style.setProperty("--angle", `${angle}deg`);
-        confetti.style.setProperty("--distance", `${distance}px`);
-        confetti.style.setProperty("--duration", `${duration}s`);
-        confetti.style.setProperty("--rotation", `${rotation}deg`);
-        confetti.style.width = `${size}px`;
-  
-        document.body.appendChild(confetti);
-  
-        setTimeout(() => {
-          confetti.remove();
-        }, duration * 1000);
-      }
-  
-      // Function to generate confetti burst
-      function generateConfettiBurst(x = window.innerWidth / 2, y = window.innerHeight / 2) {
-        const count = 50;
-        for (let i = 0; i < count; i++) {
-          createConfetti(x, y);
-        }
-      }
-  
-      // Trigger confetti burst on page load
-      generateConfettiBurst();
-  
-      // Add click event to the hero image
-      const heroImage = document.querySelector(".hero img");
-      if (heroImage) {
-        heroImage.addEventListener("click", (event) => {
-          const rect = event.target.getBoundingClientRect();
-          const x = rect.left + rect.width / 2;
-          const y = rect.top + rect.height / 2;
-          generateConfettiBurst(x, y);
-        });
-      }
-    });
-  </script>
-  
+        <!-- health indicator -->
+        <!-- <div id="health">
+          <div id="healthBar">health bar</div>
+        </div> -->
 
-</body>
+        <div>
+          <h2>stats</h2>
+          <p>score: <span id="score">0</span></p>
+          <p>lives: <span id="lives">3</span></p>
+        </div>
+
+        <!-- hide this screen at the start of the game -->
+        <div id="game-screen"></div>
+      </div>
+
+      <!-- this also needs to be hidde at the start -->
+      <div id="game-outro">
+        <h2>end message</h2>
+        <button id="restart-btn">necromantia</button>
+      </div>
+    </main>
+
+    <!-- scripts go here -->
+     <script type="text/javascript" src="/js/game.js"></script>
+     <script type="text/javascript" src="/js/script.js"></script>
+  </body>
 </html>
