@@ -11,26 +11,20 @@
     <main>
       <!-- intro screen -->
       <div id="game-intro">
-        <img src="./character.png" alt="" class="character">
+        <img src="./character.png" alt="" class="character" />
         <p>the oldest and strongest emotion of mankind is fear.</p>
         <button id="start-btn">unveil</button>
       </div>
 
       <div id="game-wrapper">
-
-        <!-- health indicator -->
-        <!-- <div id="health">
-          <div id="healthBar">health bar</div>
-        </div> -->
-
-        <div>
-          <h2>stats</h2>
-          <p>score: <span id="score">0</span></p>
-          <p>lives: <span id="lives">3</span></p>
-        </div>
-
         <!-- hide this screen at the start of the game -->
-        <div id="game-screen"></div>
+        <div id="game-screen">
+          <div id="health-bar"></div>
+          <div id="game-info">
+            <p>score: <span id="score"></span></p>
+            <p>lives: <span id="lives"></span></p>
+          </div>
+        </div>
       </div>
 
       <!-- this also needs to be hidde at the start -->
@@ -41,9 +35,9 @@
     </main>
 
     <!-- scripts go here -->
-     <script type="text/javascript" src="./game.js"></script>
-     <script type="text/javascript" src="./player.js"></script>
-     <script type="text/javascript" src="./obstacle.js"></script>
-     <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./game.js"></script>
+    <script type="text/javascript" src="./player.js"></script>
+    <script type="text/javascript" src="./obstacle.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

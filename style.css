@@ -1,29 +1,78 @@
 body {
-    background-color: brown;
-    text-align: center;
+  transition: background-color 1s ease; /* Smooth transition over 1 second */
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #game-intro {
-    padding: 20px 0px;
+  padding: 20px 0px;
 }
 
 #game-wrapper {
-    /* background-color: azure; */
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 #game-screen {
-    background-image: url(./character.png);
-     background-size: cover;
-    display: none;
+  display: none;
+  position: relative;
+  background-image: url(./bg.png);
+  background-size: cover;
+  width: 800px;
+  height: 450px;
+  overflow: hidden;
+  animation: slide 5s linear infinite;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0 -1000px;
+  }
+  95% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+#game-info {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 400px;
+  /* width: 100%; */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+}
+
+#health-bar {
+  height: 2px;
+  background-color: rgb(47, 255, 0);
+  font-weight: bold;
 }
 
 #game-outro {
-    display: none;
+  display: none;
+}
+
+#lives {
+  display: none;
 }
 
 .character {
-    width: 350px;
-    height: auto;
+  width: 350px;
+  height: auto;
 }
