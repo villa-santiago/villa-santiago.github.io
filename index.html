@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>obscura — transmute, ascend, unveil</title>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+    </style>
   </head>
 
   <body>
     <main>
       <!-- intro screen -->
       <div id="game-intro">
-        <img src="./character.png" alt="" class="character" />
-        <p>the oldest and strongest emotion of mankind is fear.</p>
-        <button id="start-btn">unveil</button>
+        <img src="./flame.png" alt="" class="character" />
+        <p>Step into the shadows, <br> unravel the unseen.</p>
+        <button id="start-btn">Enter Obscura</button>
       </div>
 
       <div id="game-wrapper">
@@ -34,10 +37,16 @@
       </div>
     </main>
 
+    <img src="./top-left.png" id="top-left" class="corner-img">
+    <img src="./top-right.png" id="top-right" class="corner-img">
+    <img src="./bottom-left.png" id="bottom-left" class="corner-img">
+    <img src="./flame.png" id="bottom-right" class="corner-img">
+
     <!-- scripts go here -->
     <script type="text/javascript" src="./game.js"></script>
     <script type="text/javascript" src="./player.js"></script>
     <script type="text/javascript" src="./obstacle.js"></script>
+    <script type="text/javascript" src="./positiveobstacle.js"></script>
     <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

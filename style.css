@@ -1,5 +1,6 @@
 body {
-  transition: background-color 1s ease; /* Smooth transition over 1 second */
+  font-family: "Pirata One", serif;
+  background-color: rgb(25, 18, 29);
   text-align: center;
   margin: 0;
   height: 100vh;
@@ -7,6 +8,36 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+p {
+  font-size: 28px;
+  max-width: 450px;
+  color: antiquewhite;
+  line-height: 95%;
+}
+
+
+button {
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 14px;
+  background-color: rgb(25, 18, 29);
+  border: none;
+  color: antiquewhite;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  color: antiquewhite;
+  background-color: rgba(49, 40, 54, 0.569); 
+}
+
+button:focus {
+  outline: none;
+}
+
+
 
 #game-intro {
   padding: 20px 0px;
@@ -23,7 +54,7 @@ body {
 #game-screen {
   display: none;
   position: relative;
-  background-image: url(./bg.png);
+  /* background-image: url(./bg.png); */
   background-size: cover;
   width: 800px;
   height: 450px;
@@ -53,14 +84,15 @@ body {
   top: 400px;
   /* width: 100%; */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
   color: white;
   padding: 10px;
 }
 
 #health-bar {
   height: 2px;
-  background-color: rgb(47, 255, 0);
+  border-radius: 50px;
+  background-color: rgb(255, 187, 0);
   font-weight: bold;
 }
 
@@ -73,6 +105,35 @@ body {
 }
 
 .character {
-  width: 350px;
+  width: 175px;
   height: auto;
 }
+
+.corner-img {
+  position: fixed; /* Keeps images in place */
+  width: 100px; /* Set width */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0.4; /* Make them slightly transparent */
+  pointer-events: none; /* Ensures they don't interfere with clicks */
+}
+
+#top-left {
+  top: 10px;
+  left: 10px;
+}
+
+#top-right {
+  top: 10px;
+  right: 10px;
+}
+
+#bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+#bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
