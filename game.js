@@ -4,18 +4,26 @@ class Game {
     this.gameScreen = document.getElementById("game-screen");
     this.gameOutroScreen = document.getElementById("game-outro");
     this.player = new Player(this.gameScreen, 200, 500, 100, 100, "./star.png");
-    this.width = 800;
+    this.width = 900;
     this.height = 450;
     this.obstacles = [];
+    this.positiveObstacles = [];
     this.score = 0;
     this.lives = 10;
     this.gameIsOver = false;
     this.gameIntervalId;
     this.gameLoopFrequency = Math.round(1000 / 60);
     this.scoreElement = document.getElementById("score");
-    this.livesElement = document.getElementById("lives");
+    this.livesElement = document.getElementById("liveschar");
     this.healthBar = document.getElementById("health-bar");
-
+    this.backgroundImages = [
+      "./bg.jpg",
+      "./hand.png",
+      "./flame.png",
+      "./bg4.png",
+      "./bg5.png",
+    ];
+    this.currentBgIndex = 0;
     this.gameInfo();
   }
 
@@ -36,7 +44,7 @@ class Game {
 
     this.update();
 
-    this.changeBgColor();
+    // this.changeBgColor();
 
     if (this.gameIsOver) {
       clearInterval(this.gameIntervalId);
@@ -70,12 +78,38 @@ class Game {
       }
     }
 
+    for (let i = 0; i < this.positiveObstacles.length; i++) {
+      const posObstacle = this.positiveObstacles[i];
+      posObstacle.move();
+
+      if (this.player.didCollide(posObstacle)) {
+        posObstacle.element.remove();
+        this.positiveObstacles.splice(i, 1);
+
+        if (this.lives < 10) {
+          this.lives++;
+          this.updateHealthBar();
+        }
+
+        i--;
+        this.gameInfo();
+      } else if (posObstacle.top > this.height) {
+        posObstacle.element.remove();
+        this.positiveObstacles.splice(i, 1);
+        i--;
+      }
+    }
+
     if (this.lives === 0) {
       this.endGame();
     }
 
     if (Math.random() > 0.98 && this.obstacles.length < 1) {
       this.obstacles.push(new Obstacle(this.gameScreen));
+    }
+
+    if (Math.random() > 0.995 && this.positiveObstacles.length < 1) {
+      this.positiveObstacles.push(new PositiveObstacle(this.gameScreen));
     }
   }
 
@@ -87,6 +121,18 @@ class Game {
   gameInfo() {
     this.scoreElement.textContent = this.score;
     this.livesElement.textContent = this.lives;
+
+    if (this.score % 10 === 0 && this.score !== 0) {
+      this.changeBackground();
+    }
+  }
+
+  changeBackground() {
+    this.currentBgIndex =
+      (this.currentBgIndex + 1) % this.backgroundImages.length;
+    this.gameScreen.style.backgroundImage = `url(${
+      this.backgroundImages[this.currentBgIndex]
+    })`;
   }
 
   endGame() {
@@ -98,5 +144,6 @@ class Game {
     this.gameIsOver = true;
     this.gameScreen.style.display = "none";
     this.gameOutroScreen.style.display = "block";
+
   }
 }
