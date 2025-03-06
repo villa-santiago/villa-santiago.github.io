@@ -44,7 +44,6 @@ class Game {
 
     this.update();
 
-    // this.changeBgColor();
 
     if (this.gameIsOver) {
       clearInterval(this.gameIntervalId);
