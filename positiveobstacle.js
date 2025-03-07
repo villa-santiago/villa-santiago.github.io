@@ -3,11 +3,11 @@ class PositiveObstacle {
       this.gameScreen = gameScreen;
       this.left = Math.floor(Math.random() * 300 + 70);
       this.top = 0;
-      this.width = 75;
-      this.height = 75;
+      this.width = 55;
+      this.height = 55;
       this.element = document.createElement("img");
   
-      this.element.src = "./bonus.png"; // Positive obstacle image
+      this.element.src = "./obstacle1.png"; // Positive obstacle image
       this.element.style.position = "absolute";
       this.element.style.width = `${this.width}px`;
       this.element.style.height = `${this.height}px`;
