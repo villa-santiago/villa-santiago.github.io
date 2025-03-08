@@ -20,4 +20,4 @@ Obscura is a game inspired by alchemy and the occult. You must navigate through 
 - **Sound & Music**: Eerie background music and effects.  
 
 ### Presentation link
-[Check out the game design on Canva](https://www.canva.com/design/DAGhFHjF3do/RMwk-XxbUQtMsaXtZt-Hhg/view?utm_content=DAGhFHjF3do&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h786107cb39)
+[Check out the presentation](https://www.canva.com/design/DAGhFHjF3do/RMwk-XxbUQtMsaXtZt-Hhg/view?utm_content=DAGhFHjF3do&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h786107cb39)
