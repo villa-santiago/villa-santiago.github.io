@@ -17,11 +17,11 @@ class Game {
     this.livesElement = document.getElementById("liveschar");
     this.healthBar = document.getElementById("health-bar");
     this.backgroundImages = [
-      "./bg.jpg",
-      "./hand.png",
-      "./flame.png",
-      "./bg4.png",
-      "./bg5.png",
+      "./background2.png",
+      "./background3.png",
+      "./background4.png",
+      "./background5.png",
+      "./background6.png",
     ];
     this.currentBgIndex = 0;
     this.gameInfo();
@@ -40,7 +40,7 @@ class Game {
   }
 
   gameLoop() {
-    console.log("obscura is running");
+    console.log("the road is long, the road is dark");
 
     this.update();
 
